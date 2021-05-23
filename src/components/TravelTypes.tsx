@@ -6,7 +6,6 @@ export function TravelTypes() {
       maxW="1440px"
       w="100%"
       mt="6rem"
-      mb="4rem"
       justify="space-between"
     >
       <VStack
