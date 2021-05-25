@@ -46,9 +46,10 @@ export default function Continent() {
               A Europa é, por convenção, um dos seis continentes do mundo.
               Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
             </Text>
-            
+
             <Flex
               w="50%"
+              h="100%"
               align="center"
               justify="space-between"
               pl="4rem"
@@ -75,10 +76,21 @@ export default function Continent() {
                 <Text color="yellow.400" fontWeight="600" fontSize="48" lineHeight="0.5">
                   27
                 </Text>
-                <Text color="dark.headings" fontWeight="600" fontSize="24">
-                  cidades +100 
-                  <Tooltip label="Número de cidades entre as 100 mais visitadas do mundo" aria-label="Cidades +100"><Icon as={FiInfo} color="dark.info"/></Tooltip>
-                </Text>
+                <Tooltip
+                  label="Cidades entre as 100 mais visitadas do mundo"
+                  aria-label="Cidades +100" 
+                  fontSize="12"
+                >
+                  <HStack
+                    spacing="2"
+                    wrap="wrap"
+                  >
+                    <Text color="dark.headings" fontWeight="600" fontSize="24">
+                      cidades +100
+                    </Text>
+                    <Icon as={FiInfo} color="dark.info" />
+                  </HStack>
+                </Tooltip>
               </VStack>
             </Flex>
           </HStack>
