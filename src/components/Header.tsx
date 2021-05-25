@@ -16,18 +16,25 @@ export function Header() {
       >
         <Flex
           align="center"
-          justify="space-between"
+          justify="center"
           w="100%"
           maxW="1440px"
           mx="2"
+          position="relative"
         >
           <Link href="/">
-            <ChakraLink as="a">
+            <ChakraLink 
+              as="a"
+              position="absolute"
+              left="0"
+            >
               <Icon as={FiChevronLeft} fontSize="32" />
             </ChakraLink>
           </Link>
-          <Img src="/logo.svg" />
-          <Box background="transparent" />
+          <Img 
+            src="/logo.svg" 
+          
+          />
         </Flex>
       </Flex>
     );
