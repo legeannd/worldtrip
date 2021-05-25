@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Img, Link as ChakraLink } from "@chakra-ui/react";
+import { Flex, Icon, Img, Link as ChakraLink } from "@chakra-ui/react";
 import { FiChevronLeft } from "react-icons/fi";
 import { useRouter } from 'next/router';
 import Link from "next/link";
@@ -28,13 +28,10 @@ export function Header() {
               position="absolute"
               left="0"
             >
-              <Icon as={FiChevronLeft} fontSize="32" />
+              <Icon as={FiChevronLeft} fontSize="32" color="dark.headings"/>
             </ChakraLink>
           </Link>
-          <Img 
-            src="/logo.svg" 
-          
-          />
+          <Img src="/logo.svg"/>
         </Flex>
       </Flex>
     );
