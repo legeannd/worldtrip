@@ -33,6 +33,7 @@ export default function Continent() {
         mt="4rem"
         w="100%"
         justify="center"
+        wrap="wrap"
       >
         <Flex
           justify="center"
@@ -95,6 +96,23 @@ export default function Continent() {
             </Flex>
           </HStack>
         </Flex>
+        <Flex
+        w="100%"
+        maxW="1440px" 
+        justify="center"
+        mt="5rem"
+      >
+        <Text
+          fontWeight="400"
+          fontSize="36"
+          color="dark.headings"
+          alignSelf="flex-start"
+          w="100%"
+          mb="2.5rem"
+        >
+          Cidades +100
+        </Text>
+      </Flex>
       </Flex>
     </Box>
   );
