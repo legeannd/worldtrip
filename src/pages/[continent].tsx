@@ -1,5 +1,6 @@
 import { Box, Flex, HStack, Icon, Img, Text, Tooltip, VStack } from '@chakra-ui/react';
 import { FiInfo } from 'react-icons/fi';
+import { CityCard } from '../components/CityCard';
 import { Header } from '../components/Header';
 
 export default function Continent() {
@@ -80,7 +81,7 @@ export default function Continent() {
                 </Text>
                 <Tooltip
                   label="Cidades entre as 100 mais visitadas do mundo"
-                  aria-label="Cidades +100" 
+                  aria-label="Cidades +100"
                   fontSize="12"
                 >
                   <HStack
@@ -98,63 +99,43 @@ export default function Continent() {
           </HStack>
         </Flex>
         <Flex
-        w="100%"
-        maxW="1440px" 
-        justify="center"
-        mt="5rem"
-        wrap="wrap"
-      >
-        <Text
-          fontWeight="400"
-          fontSize="36"
-          color="dark.headings"
-          alignSelf="flex-start"
           w="100%"
-          mb="2.5rem"
+          maxW="1440px"
+          justify="center"
+          mt="5rem"
+          wrap="wrap"
         >
-          Cidades +100
-        </Text>
-        <Flex
-          w="100%"
-        >
-          <Box
-            border="1px solid"
-            borderColor="rgba(255, 186, 8, 0.5)"
-            borderRadius="4px"
-            maxW="25%"
+          <Text
+            fontWeight="400"
+            fontSize="36"
+            color="dark.headings"
+            alignSelf="flex-start"
+            w="100%"
+            mb="2.5rem"
           >
-            <Img src="london.png"/>
-            <Flex
-              align="center"
+            Cidades +100
+        </Text>
+          <Flex
+            w="100%"
+            wrap="wrap"
+          >
+            <HStack
+              w="100%"
               justify="space-between"
-              px="1rem"
-              my="1rem"
+              mb="2rem"
             >
-              <VStack
-                justify="left"
-              >
-                <Text
-                  fontWeight="600"
-                  fontSize="20"
-                  color="dark.headings"
-                  w="100%"
-                >
-                  Londres
-                </Text>
-                <Text
-                  w="100%"
-                  fontWeight="500"
-                  fontSize="16"
-                  color="dark.info"
-                >
-                  Reino Unido
-                </Text>
-              </VStack>
-              <Img src="uk-flag.png" w="30px" h="30px"/>
-            </Flex>
-          </Box>
+              <CityCard cityName="Londres" countryName="Reino Unido" cityImage="cards/london.png" flagImage="cards/uk-flag.png" />
+              <CityCard cityName="Paris" countryName="França" cityImage="cards/paris.png" flagImage="cards/fr-flag.png" />
+              <CityCard cityName="Roma" countryName="Itália" cityImage="cards/rome.png" flagImage="cards/it-flag.png" />
+              <CityCard cityName="Praga" countryName="República Tcheca" cityImage="cards/plague.png" flagImage="cards/tc-flag.png" />
+            </HStack>
+            <HStack
+              w="100%"
+            >
+              <CityCard cityName="Amsterdã" countryName="Holanda" cityImage="cards/amsterdan.png" flagImage="cards/hl-flag.png" />
+            </HStack>
+          </Flex>
         </Flex>
-      </Flex>
       </Flex>
     </Box>
   );
