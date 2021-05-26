@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Icon, Text, Tooltip, VStack } from '@chakra-ui/react';
+import { Box, Flex, HStack, Icon, Img, Text, Tooltip, VStack } from '@chakra-ui/react';
 import { FiInfo } from 'react-icons/fi';
 import { Header } from '../components/Header';
 
@@ -11,7 +11,7 @@ export default function Continent() {
       <Flex
         align="flex-end"
         justify="center"
-        backgroundImage="/bigben.png"
+        backgroundImage="bigben.png"
         backgroundPosition="center"
         backgroundSize="cover"
         w="auto"
@@ -30,7 +30,8 @@ export default function Continent() {
         </Text>
       </Flex>
       <Flex
-        mt="4rem"
+        my="4rem"
+        px="2rem"
         w="100%"
         justify="center"
         wrap="wrap"
@@ -101,6 +102,7 @@ export default function Continent() {
         maxW="1440px" 
         justify="center"
         mt="5rem"
+        wrap="wrap"
       >
         <Text
           fontWeight="400"
@@ -112,6 +114,46 @@ export default function Continent() {
         >
           Cidades +100
         </Text>
+        <Flex
+          w="100%"
+        >
+          <Box
+            border="1px solid"
+            borderColor="rgba(255, 186, 8, 0.5)"
+            borderRadius="4px"
+            maxW="25%"
+          >
+            <Img src="london.png"/>
+            <Flex
+              align="center"
+              justify="space-between"
+              px="1rem"
+              my="1rem"
+            >
+              <VStack
+                justify="left"
+              >
+                <Text
+                  fontWeight="600"
+                  fontSize="20"
+                  color="dark.headings"
+                  w="100%"
+                >
+                  Londres
+                </Text>
+                <Text
+                  w="100%"
+                  fontWeight="500"
+                  fontSize="16"
+                  color="dark.info"
+                >
+                  Reino Unido
+                </Text>
+              </VStack>
+              <Img src="uk-flag.png" w="30px" h="30px"/>
+            </Flex>
+          </Box>
+        </Flex>
       </Flex>
       </Flex>
     </Box>
