@@ -122,16 +122,13 @@ export default function Continent() {
             <HStack
               w="100%"
               justify="space-between"
-              mb="2rem"
+              spacing="2rem"
+              wrap="wrap"
             >
               <CityCard cityName="Londres" countryName="Reino Unido" cityImage="cards/london.png" flagImage="cards/uk-flag.png" />
               <CityCard cityName="Paris" countryName="França" cityImage="cards/paris.png" flagImage="cards/fr-flag.png" />
               <CityCard cityName="Roma" countryName="Itália" cityImage="cards/rome.png" flagImage="cards/it-flag.png" />
               <CityCard cityName="Praga" countryName="República Tcheca" cityImage="cards/plague.png" flagImage="cards/tc-flag.png" />
-            </HStack>
-            <HStack
-              w="100%"
-            >
               <CityCard cityName="Amsterdã" countryName="Holanda" cityImage="cards/amsterdan.png" flagImage="cards/hl-flag.png" />
             </HStack>
           </Flex>
