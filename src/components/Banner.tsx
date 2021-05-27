@@ -30,7 +30,7 @@ export function Banner() {
           align="left"
         >
           <Text
-            fontSize="36"
+            fontSize={isWideVersion ? "36" : "20"}
             fontWeight="500"
             color="light.headings"
             maxW="600px"
@@ -39,7 +39,7 @@ export function Banner() {
             infinitas possibilidades.
           </Text>
           <Text
-            fontSize="20"
+            fontSize={isWideVersion ? "20" : "14"}
             fontWeight="400"
             color="light.info"
             maxW="600px"
