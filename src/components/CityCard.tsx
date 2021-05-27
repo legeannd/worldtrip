@@ -18,7 +18,7 @@ export function CityCard({
       border="1px solid"
       borderColor="rgba(255, 186, 8, 0.5)"
       borderRadius="4px"
-      maxW="25%"
+      maxW={["250px", "300px", "25%"]}
     >
       <Img src={cityImage} w="100%" h="auto" />
       <Flex
