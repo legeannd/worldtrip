@@ -1,10 +1,15 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
 import { Banner } from "../components/Banner";
 import { Header } from "../components/Header";
 import { SwiperComponent } from "../components/SwiperComponent";
 import { TravelTypes } from "../components/TravelTypes";
 
 export default function Home() {
+  const isWideVersion = useBreakpointValue({
+    base: false, 
+    lg: true,
+  });
+  
   return (
     <Box
       mb="2rem"
@@ -35,7 +40,7 @@ export default function Home() {
           justify="center"
           spacing="2"
           fontWeight="500"
-          fontSize="36"
+          fontSize={isWideVersion ? "36" : "20"}
           color="dark.headings"
           mb="1rem"
           w="100%"

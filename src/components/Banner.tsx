@@ -1,6 +1,11 @@
-import { Flex, VStack, Img, Text } from "@chakra-ui/react";
+import { Flex, VStack, Img, Text, useBreakpointValue } from "@chakra-ui/react";
 
 export function Banner() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   return (
     <Flex
       w="100vw"
@@ -19,7 +24,7 @@ export function Banner() {
         px="5"
         position="relative"
       >
-        <VStack 
+        <VStack
           spacing="4"
           my="4rem"
           align="left"
@@ -30,7 +35,7 @@ export function Banner() {
             color="light.headings"
             maxW="600px"
           >
-            5 Continentes, <br/>
+            5 Continentes, <br />
             infinitas possibilidades.
           </Text>
           <Text
@@ -43,13 +48,15 @@ export function Banner() {
           </Text>
         </VStack>
 
-        <Img 
-          src="/airplane.svg" 
-          h="16rem" 
-          position="absolute"
-          bottom="-10"
-          right="0"
-        />
+        {isWideVersion && (
+          <Img
+            src="/airplane.svg"
+            h="16rem"
+            position="absolute"
+            bottom="-10"
+            right="0"
+          />
+        )}
       </Flex>
     </Flex>
   );
